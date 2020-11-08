@@ -17,7 +17,7 @@ after_success:
   - docker build -t dkyw00/multi-worker ./worker
 
   # log in to the docker CLI
-  - echo "$DOCKER_PASASWORD" | docker login -u "$DOCKER_ID" --password-stdin
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
 
   # push to docker hub
   - docker push dkyw00/multi-client
